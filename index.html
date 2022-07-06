@@ -11,16 +11,40 @@
 </head>
 
 <body>
-    <h1 href="profile.png">
-        Alex's Portfolio
-    </h1>
-
     <div>
+        <h1 id = "title">Alex Cluff's Portfolio</h1>
+    </div>
+
+    <div id = "nav">
         <h2>
-            <a href="index.html" id = "nav">Home</a>
-            <a href="projects.html" id = "nav">Current Projects</a>
-            <a href="school.html" id = "nav">Past School Projects</a>
+            <a href="index.html" class = "nav" id = "active">About</a>
+            <a href="projects.html" class = "nav">Current Projects</a>
+            <a href="school.html" class = "nav">School Projects</a>
         </h2>
+    </div>
+
+    <div id = "about">
+        <img src="profile.jpg" alt="profile" id = "profile">
+        <div id = "info">
+            <a href="mailto:alexcluff16@gmail.com", class="pinfo">
+                <img src="email.svg" alt="phone" class = smallicon>
+                alexcluff16@gmail.com
+            </a>
+            <br>
+            <a href="tel:+17403969652" class = "pinfo">
+                <img src="phone.svg" alt="email" class = "smallicon">
+                740-396-9652
+            </a>
+            <br>
+            <a href="https://github.com/cluffa" class = "pinfo">
+                <img src="github.svg" alt="github" class = "smallicon">
+                GitHub.com/cluffa
+            </a>
+        </div>
+    </div>
+
+    <div class = "body">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio amet asperiores quasi exercitationem incidunt velit excepturi ipsum quam necessitatibus ducimus earum inventore, quo aut deserunt minus accusantium deleniti aliquid nesciunt?</p>
     </div>
     <script src="main.js"></script>
 </body>
