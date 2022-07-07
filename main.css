@@ -50,6 +50,16 @@
     text-decoration: underline;
 }
 
+.proj {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+.sec {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
 #profile {
     float: left;
     width: 128px;
@@ -74,8 +84,8 @@
 }
 
 
-p{
-    font-size: 1.5em;
+p, a{
+    font-size: 1em;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
