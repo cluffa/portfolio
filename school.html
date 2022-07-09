@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Cluff | Portfolio</title>
-    <link rel="icon" href="notebook.svg">
-    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="assets/notebook.svg">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div>
-        <h1 id="title">Alex Cluff's Portfolio</h1>
+        <h1 id="title">Alex's Portfolio</h1>
     </div>
 
     <div id="nav">
@@ -26,6 +26,7 @@
     <div class="body">
         <h2 id="visualization" class="sec"><strong>Visualization</strong></h2>
 
+        <div class="card">
         <h3 id="visualization-and-exploration-of-the-gapminder-dataset-using-ggplottidyverse-packages-in-r"
             class="proj">
             <em>Visualization and Exploration of the Gapminder Dataset Using ggplot/tidyverse Packages in R</em>
@@ -43,26 +44,30 @@
         <p>The focus of this project was to explore the famous Gapminder dataset visually using ggplot graphs like the
             one above. I also used the other tidyverse packages like dplyr to manipulate the data in different ways to
             create well formatted data that fits into summary tables.</p>
-
+        </div>
         <h2 id="time-series-analysis" class="sec"><strong>Time Series Analysis</strong></h2>
 
+        <div class="card">
         <h3 id="analysis-of-homicides-in-the-us-over-time-using-r-and-an-armasarima-model" class="proj"><em>Analysis of
                 Homicides in
                 the US Over Time Using R and an ARMA/SARIMA Model</em></h3>
 
         <p>View this project’s <a href="https://cluffa.github.io/stat5550project/">final report</a> and <a
                 href="https://github.com/cluffa/stat5550project/blob/master/final_project_Alex_Cluff.Rmd">source
-                code</a>.<br />
-            <img src="https://cluffa.github.io/stat5550project/index_files/figure-html/unnamed-chunk-13-1.png"
+                code.</a><br><br>
+            <img src="assets/ts_plot.png"
                 alt="homicide predictions" />
         </p>
 
         <p>This project was based around forecasting methods. I find overall trends, monthly seasonality, and fit ARIMA
             and SARIMA models. I compare the two model’s performance as well as fit. I then forecasted homicides for the
             next 24 months.</p>
-
+        
+        </div>
         <h2 id="regression-analysis" class="sec"><strong>Regression Analysis</strong></h2>
 
+        
+        <div class="card">
         <h3 class="proj"
             id="reproducing-the-results-and-logistic-regression-model-of-a-study-on-modeling-prison-sentencing-from-facial-features">
             <em>Reproducing the Results and Logistic Regression Model of a study on Modeling Prison Sentencing From
@@ -82,9 +87,12 @@
             modeling as well as the table for the models, both of which are created with the source code I linked. The
             picture above is a replication of the table used in the original paper. Interestingly, we ended up finding a
             small mistake in the paper.</p>
+        
+        </div>
 
         <h2 id="machine-learning-1" class="sec"><strong>Machine Learning</strong></h2>
 
+        <div class="card">
         <h3 id="predicting-ebay-car-prices-using-a-random-forest-model-in-r" class="proj"><em>Predicting Ebay Car Prices
                 Using a
                 Random Forest Model in R</em></h3>
@@ -103,6 +111,9 @@
             process ended up taking a few days with cross-validation on less than half of the full dataset. I had to
             weigh run time vs accuracy and pick model parameters early on in the training process.</p>
 
+        </div>
+
+        <div class = "card">
         <h3 class="proj"
             id="fitting-a-bayesian-hierarchical-model-on-fake-flu-data-simulated-with-an-mcmc-algorithm-using-r-and-rjagsjags">
             <em>Fitting a Bayesian Hierarchical Model on Fake Flu Data. Simulated with an MCMC algorithm using R and
@@ -124,8 +135,9 @@
             algorithm using R/jags.”<br />
             I fit the model, assessed fit, and interpreted the results in the context of a global pandemic.</p>
 
+        </div>
     </div>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

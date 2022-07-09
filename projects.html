@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Cluff | Portfolio</title>
-    <link rel="icon" href="notebook.svg">
-    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="assets/notebook.svg">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div>
-        <h1 id="title">Alex Cluff's Portfolio</h1>
+        <h1 id="title">Alex's Portfolio</h1>
     </div>
 
     <div id="nav">
@@ -26,6 +26,7 @@
     <div class="body">
         <h2 id="data-collection-and-cleaning" class="sec"><strong>Data Collection and Cleaning</strong></h2>
 
+        <div class="card">
         <h3 id="scraping-the-iwf-website-for-event-results-and-athlete-data" class="proj"><em>Scraping the IWF Website
                 for Event
                 Results And Athlete Data</em></h3>
@@ -39,8 +40,10 @@
             strategy, comparison of countries and athletes, and predicting PED use.</p>
 
         <p>Work in progress analysis <a href="https://cluffa.github.io/IWF_data/">here</a>.</p>
+        </div>
 
         <h2 id="dashboards" class="sec"><strong>Dashboards</strong></h2>
+        <div class="card">
 
         <p>Dashboards are running at <a
                 href="https://cluffa.shinyapps.io/Weight-Loss-Trends/">https://cluffa.shinyapps.io/Weight-Loss-Trends/</a>
@@ -52,36 +55,12 @@
         <p>I have designed a dashboard for easily filtering IWF event results and plotting athlete comparisons. There is
             also a dashboard I use for tracking weight loss trends with a linear regression model.</p>
 
-        <p><img src="/images/dashboards.png" alt="dashboards" /></p>
+        <p><img src="assets/dashboards.png" alt="dashboards" /></p>
 
+        </div>
         <h2 id="machine-learning" class="sec"><strong>Machine Learning</strong></h2>
-
-        <h3 id="disaster-tweet-classification-in-r-using-a-linear-svm-model" class="proj"><em>Disaster Tweet
-                Classification in R
-                Using a linear SVM model</em></h3>
-
-        <p>View this project’s <a href="https://cluffa.github.io/disaster_tweets_nlp_svm/">R Notebook</a>.</p>
-
-        <p>The data is a collection of tweets that have been labeled as pertaining to a disaster or not. For example,
-            one might be about the damage of an earthquake while another is about a sports team. Each tweet has a text
-            body, keyword, and location. I used a linear support vector machine (SVM) model and tested the model with
-            combinations of text body, keyword, and location.</p>
-
-        <h3 id="predicting-survivors-of-the-titanic" class="proj"><em>Predicting Survivors of the Titanic</em></h3>
-
-        <p>View this project’s <a href="https://github.com/cluffa/titanic/blob/master/titanicV2.ipynb">Jupyter
-                Notebook</a>. Most of the plotting and data exploration was done in the <a
-                href="https://github.com/cluffa/titanic/blob/master/titanic.ipynb">first version of the notebook</a>
-            where I added no features.</p>
-
-        <p>The main goal was to try to predict survivors based on what we know about each passenger. I used scikit-learn
-            pipelines to make a clear transformation pipeline for the data. This includes encoding, multivariate
-            imputing, as well as training. I used a gradient boosting classifier model where hyperparameters were
-            optimized by grid search and cross-validation. This notebook was used to submit scores to Kaggle’s “Titanic:
-            Machine Learning From Disaster” competition. With feature engineering like multivariate imputing and
-            matching families, I achieved an accuracy score of 0.801 when submitting. This put me in the top 5% of the
-            leader board.</p>
-
+        
+        <div class="card">
         <h3 id="barbell-tracking-for-performance-metrics-using-deep-learning" class="proj"><em>Barbell Tracking for
                 Performance
                 Metrics Using Deep learning</em></h3>
@@ -100,12 +79,44 @@
             acceleration are derived from the splines. These also go through Savgov filters remove distortions and
             noise.</p>
 
-        <p><img src="/images/tracking_pipeline.gif" alt="pipeline" /></p>
+        <p><img src="assets/tracking_pipeline.gif" alt="pipeline" /></p>
 
-        <p><img src="/images/tracking_graphs.png" alt="graphs" /></p>
+        <p><img src="assets/tracking_graphs.png" alt="graphs" /></p>
+        </div>
+        
+        <div class="card">
+        <h3 id="disaster-tweet-classification-in-r-using-a-linear-svm-model" class="proj"><em>Disaster Tweet
+                Classification in R
+                Using a linear SVM model</em></h3>
+
+        <p>View this project’s <a href="https://cluffa.github.io/disaster_tweets_nlp_svm/">R Notebook</a>.</p>
+
+        <p>The data is a collection of tweets that have been labeled as pertaining to a disaster or not. For example,
+            one might be about the damage of an earthquake while another is about a sports team. Each tweet has a text
+            body, keyword, and location. I used a linear support vector machine (SVM) model and tested the model with
+            combinations of text body, keyword, and location.</p>
+        </div>
+        
+        <div class="card">
+        <h3 id="predicting-survivors-of-the-titanic" class="proj"><em>Predicting Survivors of the Titanic</em></h3>
+
+        <p>View this project’s <a href="https://github.com/cluffa/titanic/blob/master/titanicV2.ipynb">Jupyter
+                Notebook</a>. Most of the plotting and data exploration was done in the <a
+                href="https://github.com/cluffa/titanic/blob/master/titanic.ipynb">first version of the notebook</a>
+            where I added no features.</p>
+
+        <p>The main goal was to try to predict survivors based on what we know about each passenger. I used scikit-learn
+            pipelines to make a clear transformation pipeline for the data. This includes encoding, multivariate
+            imputing, as well as training. I used a gradient boosting classifier model where hyperparameters were
+            optimized by grid search and cross-validation. This notebook was used to submit scores to Kaggle’s “Titanic:
+            Machine Learning From Disaster” competition. With feature engineering like multivariate imputing and
+            matching families, I achieved an accuracy score of 0.801 when submitting. This put me in the top 5% of the
+            leader board.</p>
+        </div>
 
         <h2 id="sql-and-general-programming" class="sec"><strong>SQL and General Programming</strong></h2>
-
+        
+        <div class="card">
         <h3 id="recreating-wordle-in-python-with-a-sql-database-for-scores" class="proj"><em>Recreating Wordle in Python
                 with a SQL
                 Database for Scores</em></h3>
@@ -121,8 +132,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="/images/gameplay.png" alt="game" /></td>
-                    <td><img src="/images/stats.png" alt="stats" /></td>
+                    <td><img src="assets/gameplay.png" alt="game" /></td>
+                    <td><img src="assets/stats.png" alt="stats" /></td>
                 </tr>
             </tbody>
         </table>
@@ -139,9 +150,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="/images/queries1.png" alt="example" /></td>
-                    <td><img src="/images/queries2.png" alt="example" /></td>
-                    <td><img src="/images/queries3.png" alt="example" /></td>
+                    <td><img src="assets/queries1.png" alt="example" /></td>
+                    <td><img src="assets/queries2.png" alt="example" /></td>
+                    <td><img src="assets/queries3.png" alt="example" /></td>
                 </tr>
             </tbody>
         </table>
@@ -150,9 +161,9 @@
             was able to further my understanding of databases and postgreSQL by using elephantSQL to host a table of the
             scores. Every time a game is completed, a log is added to the database with a name, date, word, number of
             guesses, and some other metrics. Then a query is executed to display basic stats and game history.</p>
-
+        </div>
     </div>
-    <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
