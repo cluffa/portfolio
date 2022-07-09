@@ -72,7 +72,7 @@ button:hover {
 }
 
 button:active {
-    background-color: lightslategray;
+    background: lightslategray;
 }
 
 /* class rules */
