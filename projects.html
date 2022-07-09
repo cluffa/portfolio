@@ -18,149 +18,196 @@
     <div id="nav">
         <h2>
             <a href="index.html" class="nav">About</a>
+            <a href="resume.html" class="nav">Resume</a>
             <a href="projects.html" class="nav" id="active">Current Projects</a>
             <a href="school.html" class="nav">School Projects</a>
         </h2>
     </div>
 
     <div class="body">
+        <h2 id="dashboards" class="sec"><strong>Dashboards</strong></h2>
+
+        <div class="card">
+            <h3 class="proj"><em>IWF Weightlifting Event Results</em></h3>
+            <hr>
+            <p>GitHub repo: <a
+                    href="https://github.com/cluffa/MyShinyDashboards">github.com/cluffa/MyShinyDashboards</a></p>
+            <p>This dashboard provides an easy way to filter and sort IWF event results. It can plot athletes,
+                countries, weight classes, and weights lifted by age, bodyweight and over time.</p>
+                
+            <button onclick="displayiwfdash()">Load Demo</button>
+            <div id="iwfdash">
+                <!-- <div class="dash_wrapper">
+                    <iframe src="https://cluffa.shinyapps.io/IWF-Data-Explorer/" frameborder="0" width="100%"
+                        height="100%"></iframe>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="proj"><em>Weight Loss Tracking</em></h3>
+            <hr>
+            <p>GitHub repo: <a
+                    href="https://github.com/cluffa/MyShinyDashboards">github.com/cluffa/MyShinyDashboards</a></p>
+            <p>This dashboard uses daily weight measurements in a linear regression model to identify trends. It also
+                predicts when a goal weight will be met.</p>
+            
+            <button onclick="displaywldash()">Load Demo</button>
+            <div id="wldash">
+                <!-- <div class="dash_wrapper">
+                    <iframe src="https://cluffa.shinyapps.io/Weight-Loss-Trends/" frameborder="0" width="100%"
+                        height="100%"></iframe>
+                </div> -->
+            </div>
+        </div>
+
+        <h2 id="machine-learning" class="sec"><strong>Machine Learning</strong></h2>
+
+        <div class="card">
+            <h3 id="barbell-tracking-for-performance-metrics-using-deep-learning" class="proj"><em>Barbell Tracking for
+                    Performance
+                    Metrics Using Deep learning</em></h3>
+            <hr>
+
+            <p>Github repository: <a href="https://github.com/cluffa/bar_tracking">github.com/cluffa/bar_tracking</a>
+            </p>
+
+            <p>I created this model and python package to be able to track a barbell and get different metrics from a
+                video.
+                It works using a convolutional neural network with 4 million parameters. It takes a 320x320x3
+                image/matrix
+                input and outputs a segmentation of the image (aka mask) where each of the two classes has a different
+                layer. Ellipses are fit to the largest contours found in each layer of the mask. This is a reliable way
+                find
+                the center, even if the object is partially out of frame. The average of the two sides is used for the
+                metrics. This is a good way to combat some of the distortions due to off-axis movements like rotation.
+                The
+                plates are always a constant 450 mm, so I was able to scale the units from pixels to meters using the
+                dimensions of the ellipses. The position at every time is then used to create two splines, f1(t)=x and
+                f2(t)=y. The splines allow for a variable time resolution as well as missing values. The velocity and
+                acceleration are derived from the splines. These also go through Savgov filters remove distortions and
+                noise.</p>
+
+            <p><img src="assets/tracking_pipeline.gif" alt="pipeline" /></p>
+
+            <p><img src="assets/tracking_graphs.png" alt="graphs" /></p>
+        </div>
+
+        <div class="card">
+            <h3 id="disaster-tweet-classification-in-r-using-a-linear-svm-model" class="proj"><em>Disaster Tweet
+                    Classification in R
+                    Using a linear SVM model</em></h3>
+            <hr>
+
+            <p>View this project’s <a href="https://cluffa.github.io/disaster_tweets_nlp_svm/">R Notebook</a>.</p>
+
+            <p>The data is a collection of tweets that have been labeled as pertaining to a disaster or not. For
+                example,
+                one might be about the damage of an earthquake while another is about a sports team. Each tweet has a
+                text
+                body, keyword, and location. I used a linear support vector machine (SVM) model and tested the model
+                with
+                combinations of text body, keyword, and location.</p>
+        </div>
+
+        <div class="card">
+            <h3 id="predicting-survivors-of-the-titanic" class="proj"><em>Predicting Survivors of the Titanic</em></h3>
+            <hr>
+
+            <p>View this project’s <a href="https://github.com/cluffa/titanic/blob/master/titanicV2.ipynb">Jupyter
+                    Notebook</a>. Most of the plotting and data exploration was done in the <a
+                    href="https://github.com/cluffa/titanic/blob/master/titanic.ipynb">first version of the notebook</a>
+                where I added no features.</p>
+
+            <p>The main goal was to try to predict survivors based on what we know about each passenger. I used
+                scikit-learn
+                pipelines to make a clear transformation pipeline for the data. This includes encoding, multivariate
+                imputing, as well as training. I used a gradient boosting classifier model where hyperparameters were
+                optimized by grid search and cross-validation. This notebook was used to submit scores to Kaggle’s
+                “Titanic:
+                Machine Learning From Disaster” competition. With feature engineering like multivariate imputing and
+                matching families, I achieved an accuracy score of 0.801 when submitting. This put me in the top 5% of
+                the
+                leader board.</p>
+        </div>
+
         <h2 id="data-collection-and-cleaning" class="sec"><strong>Data Collection and Cleaning</strong></h2>
 
         <div class="card">
-        <h3 id="scraping-the-iwf-website-for-event-results-and-athlete-data" class="proj"><em>Scraping the IWF Website
-                for Event
-                Results And Athlete Data</em></h3>
+            <h3 id="scraping-the-iwf-website-for-event-results-and-athlete-data" class="proj"><em>Scraping the IWF
+                    Website
+                    for Event
+                    Results And Athlete Data</em></h3>
+            <hr>
 
-        <p>The repository is <a href="https://github.com/cluffa/IWF_data">github.com/cluffa/IWF_data</a>. I scraped many
-            pages for all event results and athlete stats from the International Weightlifting Federation’s website. I
-            used python for scraping. I needed the data to be easily imported into R, so I used R to clean and save the
-            data.</p>
+            <p>The repository is <a href="https://github.com/cluffa/IWF_data">github.com/cluffa/IWF_data</a>. I scraped
+                many
+                pages for all event results and athlete stats from the International Weightlifting Federation’s website.
+                I
+                used python for scraping. I needed the data to be easily imported into R, so I used R to clean and save
+                the
+                data.</p>
 
-        <p>I am currently exploring the data and working on an analysis. It will cover some topics such as competition
-            strategy, comparison of countries and athletes, and predicting PED use.</p>
+            <p>I am currently exploring the data and working on an analysis. It will cover some topics such as
+                competition
+                strategy, comparison of countries and athletes, and predicting PED use.</p>
 
-        <p>Work in progress analysis <a href="https://cluffa.github.io/IWF_data/">here</a>.</p>
+            <p>Work in progress analysis <a href="https://cluffa.github.io/IWF_data/">here</a>.</p>
         </div>
 
-        <h2 id="dashboards" class="sec"><strong>Dashboards</strong></h2>
+
+        <h2 id="sql-and-general-programming" class="sec"><strong>SQL</strong></h2>
+
         <div class="card">
+            <h3 id="recreating-wordle-in-python-with-a-sql-database-for-scores" class="proj"><em>Recreating Wordle in
+                    Python
+                    with a SQL
+                    Database for Scores</em></h3>
+            <hr>
 
-        <p>Dashboards are running at <a
-                href="https://cluffa.shinyapps.io/Weight-Loss-Trends/">https://cluffa.shinyapps.io/Weight-Loss-Trends/</a>
-            and <a
-                href="https://cluffa.shinyapps.io/IWF-Data-Explorer/">https://cluffa.shinyapps.io/IWF-Data-Explorer/</a>.
-            The source code is at <a
-                href="https://github.com/cluffa/MyShinyDashboards">github.com/cluffa/MyShinyDashboards</a></p>
+            <p>Github repository: <a href="https://github.com/cluffa/wordpy">github.com/cluffa/wordpy</a></p>
 
-        <p>I have designed a dashboard for easily filtering IWF event results and plotting athlete comparisons. There is
-            also a dashboard I use for tracking weight loss trends with a linear regression model.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Game History/Leader board</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="assets/gameplay.png" alt="game" /></td>
+                        <td><img src="assets/stats.png" alt="stats" /></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <p><img src="assets/dashboards.png" alt="dashboards" /></p>
+            <p><strong>Some of the queries:</strong></p>
 
-        </div>
-        <h2 id="machine-learning" class="sec"><strong>Machine Learning</strong></h2>
-        
-        <div class="card">
-        <h3 id="barbell-tracking-for-performance-metrics-using-deep-learning" class="proj"><em>Barbell Tracking for
-                Performance
-                Metrics Using Deep learning</em></h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Logging</th>
+                        <th>Rankings</th>
+                        <th>Personal Game History</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="assets/queries1.png" alt="example" /></td>
+                        <td><img src="assets/queries2.png" alt="example" /></td>
+                        <td><img src="assets/queries3.png" alt="example" /></td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <p>Github repository: <a href="https://github.com/cluffa/bar_tracking">github.com/cluffa/bar_tracking</a></p>
-
-        <p>I created this model and python package to be able to track a barbell and get different metrics from a video.
-            It works using a convolutional neural network with 4 million parameters. It takes a 320x320x3 image/matrix
-            input and outputs a segmentation of the image (aka mask) where each of the two classes has a different
-            layer. Ellipses are fit to the largest contours found in each layer of the mask. This is a reliable way find
-            the center, even if the object is partially out of frame. The average of the two sides is used for the
-            metrics. This is a good way to combat some of the distortions due to off-axis movements like rotation. The
-            plates are always a constant 450 mm, so I was able to scale the units from pixels to meters using the
-            dimensions of the ellipses. The position at every time is then used to create two splines, f1(t)=x and
-            f2(t)=y. The splines allow for a variable time resolution as well as missing values. The velocity and
-            acceleration are derived from the splines. These also go through Savgov filters remove distortions and
-            noise.</p>
-
-        <p><img src="assets/tracking_pipeline.gif" alt="pipeline" /></p>
-
-        <p><img src="assets/tracking_graphs.png" alt="graphs" /></p>
-        </div>
-        
-        <div class="card">
-        <h3 id="disaster-tweet-classification-in-r-using-a-linear-svm-model" class="proj"><em>Disaster Tweet
-                Classification in R
-                Using a linear SVM model</em></h3>
-
-        <p>View this project’s <a href="https://cluffa.github.io/disaster_tweets_nlp_svm/">R Notebook</a>.</p>
-
-        <p>The data is a collection of tweets that have been labeled as pertaining to a disaster or not. For example,
-            one might be about the damage of an earthquake while another is about a sports team. Each tweet has a text
-            body, keyword, and location. I used a linear support vector machine (SVM) model and tested the model with
-            combinations of text body, keyword, and location.</p>
-        </div>
-        
-        <div class="card">
-        <h3 id="predicting-survivors-of-the-titanic" class="proj"><em>Predicting Survivors of the Titanic</em></h3>
-
-        <p>View this project’s <a href="https://github.com/cluffa/titanic/blob/master/titanicV2.ipynb">Jupyter
-                Notebook</a>. Most of the plotting and data exploration was done in the <a
-                href="https://github.com/cluffa/titanic/blob/master/titanic.ipynb">first version of the notebook</a>
-            where I added no features.</p>
-
-        <p>The main goal was to try to predict survivors based on what we know about each passenger. I used scikit-learn
-            pipelines to make a clear transformation pipeline for the data. This includes encoding, multivariate
-            imputing, as well as training. I used a gradient boosting classifier model where hyperparameters were
-            optimized by grid search and cross-validation. This notebook was used to submit scores to Kaggle’s “Titanic:
-            Machine Learning From Disaster” competition. With feature engineering like multivariate imputing and
-            matching families, I achieved an accuracy score of 0.801 when submitting. This put me in the top 5% of the
-            leader board.</p>
-        </div>
-
-        <h2 id="sql-and-general-programming" class="sec"><strong>SQL and General Programming</strong></h2>
-        
-        <div class="card">
-        <h3 id="recreating-wordle-in-python-with-a-sql-database-for-scores" class="proj"><em>Recreating Wordle in Python
-                with a SQL
-                Database for Scores</em></h3>
-
-        <p>Github repository: <a href="https://github.com/cluffa/wordpy">github.com/cluffa/wordpy</a></p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Game</th>
-                    <th>Game History/Leader board</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="assets/gameplay.png" alt="game" /></td>
-                    <td><img src="assets/stats.png" alt="stats" /></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p><strong>Some of the queries:</strong></p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Logging</th>
-                    <th>Rankings</th>
-                    <th>Personal Game History</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="assets/queries1.png" alt="example" /></td>
-                    <td><img src="assets/queries2.png" alt="example" /></td>
-                    <td><img src="assets/queries3.png" alt="example" /></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p>This was a fun side project where my goal was to recreate wordle and use a SQL database for leader boards. I
-            was able to further my understanding of databases and postgreSQL by using elephantSQL to host a table of the
-            scores. Every time a game is completed, a log is added to the database with a name, date, word, number of
-            guesses, and some other metrics. Then a query is executed to display basic stats and game history.</p>
+            <p>This was a fun side project where my goal was to recreate wordle and use a SQL database for leader
+                boards. I
+                was able to further my understanding of databases and postgreSQL by using elephantSQL to host a table of
+                the
+                scores. Every time a game is completed, a log is added to the database with a name, date, word, number
+                of
+                guesses, and some other metrics. Then a query is executed to display basic stats and game history.</p>
         </div>
     </div>
     <script src="script.js"></script>
