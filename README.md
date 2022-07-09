@@ -1,4 +1,4 @@
-# portfolio WIP
+# portfolio
 <https://cluffa.github.io/portfolio>
 
-will eventually replace <https://cluffa.github.io>
+Replaced <https://cluffa.github.io>
