@@ -35,7 +35,11 @@
             <p>This dashboard provides an easy way to filter and sort IWF event results. It can plot athletes,
                 countries, weight classes, and weights lifted by age, bodyweight and over time.</p>
                 
-            <button onclick="displayiwfdash()">Load Demo</button>
+            <button onclick="display('iwfdash', 'https://cluffa.shinyapps.io/IWF-Data-Explorer/')" value="Show">Load Demo</button>
+            <button onclick="hide('iwfdash')" value="Hide">Hide Demo</button>
+            
+            <a>or</a>
+            <a href="https://cluffa.shinyapps.io/IWF-Data-Explorer/" target="_blank">Direct Link</a>
             <div id="iwfdash">
                 <!-- <div class="dash_wrapper">
                     <iframe src="https://cluffa.shinyapps.io/IWF-Data-Explorer/" frameborder="0" width="100%"
@@ -52,7 +56,11 @@
             <p>This dashboard uses daily weight measurements in a linear regression model to identify trends. It also
                 predicts when a goal weight will be met.</p>
             
-            <button onclick="displaywldash()">Load Demo</button>
+            <button onclick="display('wldash', 'https://cluffa.shinyapps.io/Weight-Loss-Trends/')" target="_blank">Load Demo</button>
+            <button onclick="hide('wldash')" value="Hide">Hide Demo</button>
+            
+            <a>or</a>
+            <a href="https://cluffa.shinyapps.io/Weight-Loss-Trends/">Direct Link</a>
             <div id="wldash">
                 <!-- <div class="dash_wrapper">
                     <iframe src="https://cluffa.shinyapps.io/Weight-Loss-Trends/" frameborder="0" width="100%"
