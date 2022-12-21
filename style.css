@@ -57,7 +57,7 @@ iframe {
 }
 
 button {
-    float: inline-start;
+    float: left;
     border-radius: 10px;
     background-color: #171a23;
     color: #fff;
@@ -67,6 +67,7 @@ button {
     border: none;
     cursor: pointer;
     border: 2px solid transparent;
+    margin-right: 4px;
 }
 
 button:hover {
@@ -82,6 +83,7 @@ button:active {
 .card {
     background-color: rgb(43, 49, 55);
     padding: 10px;
+    padding-bottom: 24px;
     border-radius: 16px;
     margin-bottom: 10px;
 }
