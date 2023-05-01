@@ -190,7 +190,7 @@ button:active {
     margin: 28px;
 }
 
-div#intro {
+#intro {
     font-size: 1.5em;
     background-color: rgb(43, 49, 55);
     padding: 28px;
