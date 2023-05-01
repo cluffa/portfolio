@@ -198,6 +198,14 @@ button:active {
     width: 50%;
 }
 
+#resume {
+    font-size: 1.5em;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 16px;
+    width: 50%;
+}
+
 #iwfdash {
     padding-top: 12px;
 }
